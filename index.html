@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <h1>YourToDo</h1>
+      <div class="right-nav">
+        <button class="sign-up">SignUp</button>
+        <button class="sign-in">Login</button>
+      </div>
+    </header>
+    <form id="todo-form">
+        <input
+          placeholder="Add todo"
+          required
+          type="text"
+          name="todo"
+          id="todo-input"
+        />
+  
+        <label for="priority">Choose a priority:</label>
+        <select name="priority" id="priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+  
+        <button type="submit">Add todo</button>
+      </form>
+  
+      <form id="priority-form">
+        <label for="priority">Filter todo (priority)</label>
+        <select name="priority" id="priority">
+          <option value="all">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <button onclick="clearAll()">Clear All Data</button>
+      </form>
+      
+      <div id="todo-list"></div>
+      <script src="index.js"></script>
+</body>
+</html>
